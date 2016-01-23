@@ -1,10 +1,18 @@
 (function () {
   'use strict';
 
-  describe('Give it some context', function () {
-    describe('maybe a bit more context here', function () {
-      it('should run here few assertions', function () {
+  describe('Application', function () {
+    var createNewGameFnSpy;
+    beforeEach(function () {
+      createNewGameFnSpy = chai.spy(Application.createNewGame);
+    })
+    describe('init', function () {
 
+      it('should create a new Game', function () {
+        Application.init();
+
+console.log("test")
+        expect(createNewGameFnSpy).to.have.been.called();
       });
     });
   });

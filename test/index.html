@@ -10,14 +10,21 @@
   <script src="../bower_components/mocha/mocha.js"></script>
   <script>mocha.setup('bdd');</script>
   <script src="../bower_components/chai/chai.js"></script>
+  <script src="../bower_components/chai-spies/chai-spies.js"></script>
+  <script src="../bower_components/sinon/lib/sinon.js"></script>
+  <script src="../bower_components/sinon-chai/lib/sinon-chai.js"></script>
   <script>
     var assert = chai.assert;
     var expect = chai.expect;
+    var spy = chai.spy;
     var should = chai.should();
   </script>
   <!-- bower:js -->
   <!-- endbower -->
   <!-- include source files here... -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/application.js"></script>
+  <!-- endbuild -->
   <!-- include spec files here... -->
   <script src="spec/test.js"></script>
   <script>
