@@ -6,37 +6,28 @@ var Application = (function () {
       this.createNewGame();
     },
     createNewGame: function () {
-      console.log("create game called")
+      game = new Game();
+    },
+    getActualGame: function () {
+      return game;
     }
   }
 })();
 
-"use strict";
+var Game = function(){
+  this.opponentA = null;
+  this.opponentB = null;
 
-(function(exports) {
+  this.initialize = function () {
+    this.opponentA = new Opponent();
+    this.opponentB = new Opponent();
 
-  exports.Application = function () {
-    this.data = {};
-  }
+  }.bind(this);
 
-  exports.Application.prototype.add = function(elem) {
-    if (typeof elem !== "string") {
-      throw new TypeError("Argument is not a string: "+elem);
-    }
-    this.data[elem] = true;
-  }
 
-  exports.Application.prototype.contains = function(elem) {
-    // Comparison ensures boolean result
-    return this.data[elem] === true;
-  }
+  this.initialize();
+};
 
-  exports.Application.prototype.copy = function() {
-    var result = new exports.Application();
-    Object.keys(this.data).forEach(function(elem) {
-      result.add(elem);
-    });
-    return result;
-  }
+var Opponent = function () {
 
-}(typeof exports === "undefined" ? (this.strset = {}) : exports));
+};
