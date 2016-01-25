@@ -13,21 +13,3 @@ var Application = (function () {
     }
   }
 })();
-
-var Game = function(){
-  this.opponentA = null;
-  this.opponentB = null;
-
-  this.initialize = function () {
-    this.opponentA = new Opponent();
-    this.opponentB = new Opponent();
-
-  }.bind(this);
-
-
-  this.initialize();
-};
-
-var Opponent = function () {
-
-};

@@ -23,12 +23,18 @@
   <!-- endbower -->
   <!-- include source files here... -->
   <!-- build:js scripts/main.js -->
+  <script src="scripts/constants.js"></script>
+  <script src="scripts/models/game.model.js"></script>
+  <script src="scripts/models/ball.model.js"></script>
+  <script src="scripts/models/player.model.js"></script>
+  <script src="scripts/application.js"></script>
   <script src="scripts/application.js"></script>
   <!-- endbuild -->
   <!-- include spec files here... -->
   <script src="spec/application.spec.js"></script>
   <script src="spec/game.spec.js"></script>
-  <script src="spec/opponent.spec.js"></script>
+  <script src="spec/player.spec.js"></script>
+  <script src="spec/ball.spec.js"></script>
   <script>
     if (navigator.userAgent.indexOf('PhantomJS') === -1) {
       mocha.run();

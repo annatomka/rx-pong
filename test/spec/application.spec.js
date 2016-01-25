@@ -7,6 +7,10 @@
       createNewGameFnSpy = chai.spy(Application.createNewGame);
     });
 
+    it('should have a method createNewGame()', function () {
+      expect(Application.createNewGame).to.exist;
+    });
+
     describe('createNewGame', function () {
 
       it('should create a new Game', function () {
